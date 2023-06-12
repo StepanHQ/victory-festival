@@ -1,0 +1,154 @@
+:root {
+  --main-bg-color: #f1fdff;
+  --active-bg-color: #7ae5fd;
+  --secondary-bg-color: #f9fadf;
+  --secondary-text-color: #3d8c9d;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  column-gap: 56px;
+}
+
+.btn {
+  font-size: 18px;
+  background-color: var(--active-bg-color);
+  padding: 20px 36px;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 92px;
+  color: #9ad2de;
+  text-transform: uppercase;
+  width: min-content;
+  line-height: 95%;
+}
+
+h2,
+h3,
+h5 {
+  font-weight: 400;
+  line-height: 120%;
+  margin: 0;
+}
+
+h2 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 46px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 27px;
+}
+
+.main-description {
+  max-width: 484px;
+  margin-bottom: 88px;
+}
+
+.section-1 {
+  background-color: var(--main-bg-color);
+  background-image: url("/img/woman-holding-ukranian-flag.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100%;
+  padding: 64px 100px;
+}
+
+.section-2 {
+  margin-top: 80px;
+  padding: 64px 100px;
+  text-align: center;
+}
+
+.section-description {
+  color: #73a6b1;
+  max-width: 588px;
+  margin-inline: auto;
+  margin-top: 10px;
+}
+
+.agenda {
+  list-style-type: none;
+  padding: 0;
+  margin: 45px 0 0 0;
+  font-size: 16px;
+}
+
+.agenda li:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.time {
+  color: #3d8c9d;
+  margin-top: 10px;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  text-align: left;
+  justify-content: space-between;
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 68px 0;
+}
+
+.card img {
+  height: calc(100% - 80px);
+  position: absolute;
+  right: 40px;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal width columns */
+  grid-auto-rows: minmax(min-content, max-content); /* row height based on content */
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2) {
+  grid-row: 1; /* put them in the first row */
+}
+
+.cell:nth-child(3),
+.cell:nth-child(4) {
+  grid-row: 2; /* put them in the second row */
+}
+
+.cell:nth-child(2),
+.cell:nth-child(4) {
+  align-self: start; /* make sure the height is the same as the tallest item in their row */
+}
